@@ -20,6 +20,7 @@ func preorder(root *TreeNode, mainroot *TreeNode) {
 	} else {
 		mainroot.Right = root
 		mainroot.Left = new(TreeNode)
+		mainroot = root
 		preorder(root.Left, mainroot)
 		preorder(root.Right, mainroot)
 	}
